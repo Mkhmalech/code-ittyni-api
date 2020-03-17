@@ -41,3 +41,27 @@ export const autoInc : any = async () => {
        return "Somthing Wrong"
    }
 }
+export const autoIncLabos : any = async () => {
+
+    const countLabo = await Count.findOne({}, async (err, count)=>{
+                if(typeof count === 'undefined' || count === null) {
+                    const Counter = new Count({labo : 1 });
+                    return await Counter.save((err, res)=>{
+                        if(err) throw err;
+                        return res;
+                    })
+                } else { 
+                    Count.findOneAndUpdate({},{$inc: {labo:1}}, (err, doc)=>{
+                        if(err) throw err;
+                        if(doc === null) throw new Error("doc is null")
+                        return ++doc.user
+                    })
+                }
+            })
+    
+   if(countLabo) {
+       return countLabo.user
+   } else {
+        throw new Error ("Somthing Wrong")
+   }
+}

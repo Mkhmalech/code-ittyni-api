@@ -4,7 +4,7 @@ import { Schema, model, Document } from "mongoose";
 interface CountModel extends Document {
     user : number
     tests : number
-    labs : number
+    labo : number
 }
 
 const CountSchema: Schema = new Schema({
@@ -16,7 +16,7 @@ const CountSchema: Schema = new Schema({
         type: Number,
         unique: true
     },
-    labs: {
+    labo: {
         type: Number,
         unique: true
     },

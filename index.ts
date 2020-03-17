@@ -1,1 +1,1 @@
-export * from './src/code'
+export * from './src/controller/code'
