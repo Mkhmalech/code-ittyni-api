@@ -1,0 +1,19 @@
+{
+  "name": "code-ittyni-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mkhmalech/code-ittyni-api.git"
+  },
+  "author": "khm@med",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mkhmalech/code-ittyni-api/issues"
+  },
+  "homepage": "https://github.com/Mkhmalech/code-ittyni-api#readme"
+}
